@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+	<meta charset="utf-8" >
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+	<title>3D立方体相册</title>
+    <link rel="stylesheet" href="index.css">
+  </head>
+  
+  <body>	
+	 <!--第一步，准备一个包裹器-->
+     <div id="wrap">
+          <!--第二步，先组装内部的正方体-->
+          <span id="in-front"><img src="img/v1.png"></span>
+          <span id="in-back"><img src="img/v2.png"></span>
+          <span id="in-left"><img src="img/v3.png"></span>
+          <span id="in-right"><img src="img/v4.png"></span>
+          <span id="in-top"><img src="img/v5.png"></span>
+          <span id="in-bottom"><img src="img/v6.png"></span>
+          
+         
+    
+     </div>
+  </body>
+</html>
