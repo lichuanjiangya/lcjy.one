@@ -5,10 +5,91 @@
 	<meta charset="utf-8" >
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
 	<title>3D立方体相册</title>
-    <link rel="stylesheet" href="index.css">
+
+   ＜style＞
+    #wrap span{
+    display:block;
+    width:100px;
+    height:100px;
+    background-color:khaki;
+    position:absolute;
+}
+
+#wrap{
+    width:100px;
+    height:100px;
+    margin:200px auto;
+    animation:rotate 20s infinite;
+    /*设置，在3d空间中展现*/
+    transform-style:preserve-3d;
+  }
+
+
+/*设置图片的大小*/
+
+
+#wrap span img{
+    width:100%;
+    height:100%;
+  }
+/*第一步，旋转正方形，进行组装*/
+
+
+/*第一，前面部分*/
+
+#in-front{
+     transform:translateZ(50px);
+  }
+
+#in-back{
+     transform:translateZ(-50px);
+  }
+
+#in-left{
+     transform:rotateY(90deg) translateZ(50px);
+  }
+
+#in-right{
+     transform:rotateY(-90deg) translateZ(50px);
+  }
+
+#in-top{
+     transform:rotateX(90deg) translateZ(50px);
+  }
+
+#in-bottom{
+     transform:ratateX(-90deg) translateZ(50px);
+  }
+
+
+/*动态函数 @keyframe*/
+
+@keyframe rotate{
+    from{
+      transform:rotate X(0deg) rotate Y(0deg);
+     }
+    to{
+      transform:rotate X(360deg) rotate Y(360deg);
+     }
+  
+  
+  }
+   ＜/style＞
   </head>
   
   <body>	
-    <h1>哈哈  成功啦</h1>
+	 <!--第一步，准备一个包裹器-->
+     <div id="wrap">
+          <!--第二步，先组装内部的正方体-->
+          <span id="in-front">< img src="img/v1.png"></span>
+          <span id="in-back">< img src="img/v2.png"></span>
+          <span id="in-left">< img src="img/v3.png"></span>
+          <span id="in-right">< img src="img/v4.png"></span>
+          <span id="in-top">< img src="img/v5.png"></span>
+          <span id="in-bottom">< img src="img/v6.png"></span>
+          
+         
+    
+     </div>
   </body>
 </html>
